@@ -1,18 +1,13 @@
 # Cloudflare Pages + KV config
-# https://developers.cloudflare.com/pages/functions/bindings/#kv-namespaces
+# KV ID'leri Pages Dashboard > Settings > Functions'tan alınacak
 
 name = "supplement-arena"
 compatibility_date = "2026-01-01"
+pages_build_output_dir = "./dist"
 
 # KV namespace binding
+# Dashboard'dan ID'leri aldıktan sonra buraya yaz
 [[kv_namespaces]]
 binding = "SUPPLEMENT_KV"
-id = "YOUR_KV_NAMESPACE_ID"
-preview_id = "YOUR_KV_NAMESPACE_PREVIEW_ID"
-
-[build]
-command = "npm run build"
-output = "dist"
-
-[env.production]
-name = "supplement-arena"
+id = "REPLACE_WITH_REAL_KV_ID"
+preview_id = "REPLACE_WITH_PREVIEW_KV_ID"
