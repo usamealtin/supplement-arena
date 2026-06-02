@@ -1,0 +1,18 @@
+# Cloudflare Pages + KV config
+# https://developers.cloudflare.com/pages/functions/bindings/#kv-namespaces
+
+name = "supplement-arena"
+compatibility_date = "2026-01-01"
+
+# KV namespace binding
+[[kv_namespaces]]
+binding = "SUPPLEMENT_KV"
+id = "YOUR_KV_NAMESPACE_ID"
+preview_id = "YOUR_KV_NAMESPACE_PREVIEW_ID"
+
+[build]
+command = "npm run build"
+output = "dist"
+
+[env.production]
+name = "supplement-arena"

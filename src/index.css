@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  input,
+  select,
+  textarea {
+    text-transform: none !important;
+  }
+}
+
+@layer utilities {
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .text-brand {
+    @apply text-red-600;
+  }
+
+  .bg-brand {
+    @apply bg-red-600;
+  }
+
+  .border-brand {
+    @apply border-red-600;
+  }
+
+  .focus\:border-brand:focus {
+    @apply border-red-600;
+  }
+}
